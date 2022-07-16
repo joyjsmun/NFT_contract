@@ -1,0 +1,12 @@
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.0;
+
+//import openzeppelin contracts for ERC721
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+// GameItem is  ERC721 signifies that the contract that I am creating imports ERC721 and follows ERC721 contract from openzeppelin
+contract GameItem is ERC721{
+    constructor() ERC721("GameItem","LIJ"){
+        _mint(msg.sender, 1);
+    }
+}
